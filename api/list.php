@@ -7,7 +7,7 @@ $username = 'root';
 $passwd = 'hiroaki';
 $dbname = 'test';
 $data = [];
-$link =  mysqliconnect('localhost', 'root', 'hiroaki', 'test');
+$link =  mysqli_connect('localhost', 'root', 'hiroaki', 'test');
 mysqli_set_charset($link, 'utf8');
 
 if ($link !== FALSE) {

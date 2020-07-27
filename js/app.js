@@ -16,11 +16,12 @@ document.getElementById("api_action").addEventListener("click", function() {
 	    }
     })
     .then(function (json) {
-//    	console.log(json);
-//    	if (Array.isArray(json) === FALSE) {
-//    		alert('エラー');
-//    		exit;
-//    	}
+    	console.log(Array.isArray(json));
+
+    	if (Array.isArray(json) === false) {
+    		alert('配列ではありません');
+    	}
+
     	let table = document.getElementById('api_list');
     	table.deleteRow(0);
     	let newRow;
